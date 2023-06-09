@@ -65,7 +65,7 @@ public class UtentiService {
 		Utente found = this.findById(id);
 		List<Dispositivo> dispositiviUtente = found.getDispositivi();
 		Iterator<Dispositivo> i = dispositiviUtente.iterator();
-		while (i.hasNext()) { // PRIMA DI ELIMINARE GLI UTENTI SETTO IL DISPOSITIVO COME DISPONIBILE E LA
+		while (i.hasNext()) { // PRIMA DI ELIMINARE L'UTENTE SETTO IL DISPOSITIVO COME DISPONIBILE E LA
 								// CHIAVE ESTERNA A NULL
 			Dispositivo current = i.next();
 			current.setStatoDispositivo(StatoDispositivo.DISPONIBILE);
