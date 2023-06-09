@@ -28,27 +28,37 @@ public class UtentiController {
 	@Autowired
 	private UtentiService utentiService;
 
+	// GET UTENTI
+
 	@GetMapping("")
 	public Page<Utente> getUtenti(@RequestParam(defaultValue = "0") int page,
 			@RequestParam(defaultValue = "10") int size, @RequestParam(defaultValue = "id") String sortBy) {
 		return utentiService.find(page, size, sortBy);
 	}
 
+	// GET SINGOLO UTENTE
+
 	@GetMapping("/{id}")
 	public Utente getById(@PathVariable UUID id) throws NotFoundException {
 		return utentiService.findById(id);
 	}
+
+	// MODIFICA SINGOLO UTENTE
 
 	@PutMapping("/{userId}")
 	public Utente updateUser(@PathVariable UUID userId, @RequestBody RegistrazioneUtentePayload body) throws Exception {
 		return utentiService.findByIdAndUpdate(userId, body);
 	}
 
+	// ELIMINAZIONE SINGOLO UTENTE
+
 	@DeleteMapping("/{userId}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void deleteUser(@PathVariable UUID userId) throws NotFoundException {
 		utentiService.findByIdAndDelete(userId);
 	}
+
+	// GET LISTA DISPOSITIVI UTENTE
 
 	@GetMapping("/{id}/devices")
 	public List<Dispositivo> getListaDispositivi(@PathVariable UUID id) {

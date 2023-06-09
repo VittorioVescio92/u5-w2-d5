@@ -24,11 +24,15 @@ public class AuthController {
 	@Autowired
 	UtentiService utentiService;
 
+	// REGISTAZIONE UTENTE
+
 	@PostMapping("/register")
 	public ResponseEntity<Utente> register(@RequestBody @Validated RegistrazioneUtentePayload body) {
 		Utente createdUtente = utentiService.create(body);
 		return new ResponseEntity<>(createdUtente, HttpStatus.CREATED);
 	}
+
+	// LOGIN UTENTE
 
 	@PostMapping("/login")
 	public ResponseEntity<AuthenticationSuccessfullPayload> login(@RequestBody LoginUtentePayload body)

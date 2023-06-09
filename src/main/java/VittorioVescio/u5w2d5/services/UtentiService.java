@@ -39,7 +39,7 @@ public class UtentiService {
 	}
 
 	public Utente create(RegistrazioneUtentePayload u) {
-		utentiRepository.findByEmail(u.getEmail()).ifPresent(user -> {
+		utentiRepository.findByEmail(u.getEmail()).ifPresent(user -> { // VERIFICO SE LA MAIL ESISTE GIA'
 			throw new BadRequestException("Email " + user.getUsername() + " already in use!");
 		});
 		List<Dispositivo> list = new ArrayList<>();
@@ -65,7 +65,8 @@ public class UtentiService {
 		Utente found = this.findById(id);
 		List<Dispositivo> dispositiviUtente = found.getDispositivi();
 		Iterator<Dispositivo> i = dispositiviUtente.iterator();
-		while (i.hasNext()) {
+		while (i.hasNext()) { // PRIMA DI ELIMINARE GLI UTENTI SETTO IL DISPOSITIVO COME DISPONIBILE E LA
+								// CHIAVE ESTERNA A NULL
 			Dispositivo current = i.next();
 			current.setStatoDispositivo(StatoDispositivo.DISPONIBILE);
 			current.setUtente(null);

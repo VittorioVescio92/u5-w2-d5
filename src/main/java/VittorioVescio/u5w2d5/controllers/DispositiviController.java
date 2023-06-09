@@ -29,16 +29,22 @@ public class DispositiviController {
 	@Autowired
 	private DispositiviService dispositiviService;
 
+	// GET DISPOSITIVI
+
 	@GetMapping("")
 	public Page<Dispositivo> getDispositivo(@RequestParam(defaultValue = "0") int page,
 			@RequestParam(defaultValue = "20") int size, @RequestParam(defaultValue = "id") String sortBy) {
 		return dispositiviService.findAll(page, size, sortBy);
 	}
 
+	// GET DISPOSITIVO SINGOLO
+
 	@GetMapping("/{id}")
 	public Dispositivo getById(@PathVariable UUID id) {
 		return dispositiviService.findById(id);
 	}
+
+	// CREAZIONE DISPOSITIVO
 
 	@PostMapping("")
 	@ResponseStatus(HttpStatus.CREATED)
@@ -46,11 +52,14 @@ public class DispositiviController {
 		return dispositiviService.create(p);
 	}
 
+	// MODIFICA DISPOSITIVO
 	@PutMapping("/{id}")
 	public Dispositivo updateDispositivo(@PathVariable UUID id, @RequestBody ModificaDispositivoPayload body)
 			throws Exception {
 		return dispositiviService.findByIdAndUpdate(id, body);
 	}
+
+	// ELIMINAZIONE DISPOSITIVO
 
 	@DeleteMapping("/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
