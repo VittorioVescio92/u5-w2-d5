@@ -35,7 +35,7 @@ public class AuthController {
 			throws NotFoundException {
 		Utente utente = utentiService.findByUsername(body.getUsername());
 		if (!body.getPassword().matches(utente.getPassword()))
-			throw new UnauthorizedException("Credenziali non valide");
+			throw new UnauthorizedException("Credenziali di accesso non valide");
 		String token = JWTTools.createToken(utente);
 		return new ResponseEntity<>(new AuthenticationSuccessfullPayload(token), HttpStatus.OK);
 	}

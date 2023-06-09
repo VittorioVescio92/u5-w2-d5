@@ -35,7 +35,7 @@ public class UtentiController {
 	}
 
 	@GetMapping("/{id}")
-	public Utente getById(@PathVariable UUID id) {
+	public Utente getById(@PathVariable UUID id) throws NotFoundException {
 		return utentiService.findById(id);
 	}
 

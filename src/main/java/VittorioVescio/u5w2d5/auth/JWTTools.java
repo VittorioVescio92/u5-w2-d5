@@ -15,8 +15,6 @@ import io.jsonwebtoken.security.Keys;
 @Component
 public class JWTTools {
 
-	// @Value("${spring.application.jwt.secret}") non funziona se le variabili sono
-	// statiche
 	private static String secret;
 	private static int expiration;
 

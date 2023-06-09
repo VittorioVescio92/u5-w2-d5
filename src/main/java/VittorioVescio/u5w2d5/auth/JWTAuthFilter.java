@@ -33,7 +33,6 @@ public class JWTAuthFilter extends OncePerRequestFilter {
 		String accessToken = authHeader.substring(7);
 		JWTTools.isTokenValid(accessToken);
 		String username = JWTTools.extractSubject(accessToken);
-		System.out.println("******************************** " + username);
 		try {
 			Utente user = utentiService.findByUsername(username);
 			UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(user, null,
@@ -41,7 +40,7 @@ public class JWTAuthFilter extends OncePerRequestFilter {
 			authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 			SecurityContextHolder.getContext().setAuthentication(authToken);
 			filterChain.doFilter(request, response);
-		} catch (NotFoundException e) {
+		} catch (UnauthorizedException e) {
 			throw new NotFoundException("Token non valido!");
 		}
 	}

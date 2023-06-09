@@ -31,7 +31,7 @@ public class DispositiviController {
 
 	@GetMapping("")
 	public Page<Dispositivo> getDispositivo(@RequestParam(defaultValue = "0") int page,
-			@RequestParam(defaultValue = "10") int size, @RequestParam(defaultValue = "id") String sortBy) {
+			@RequestParam(defaultValue = "20") int size, @RequestParam(defaultValue = "id") String sortBy) {
 		return dispositiviService.findAll(page, size, sortBy);
 	}
 
