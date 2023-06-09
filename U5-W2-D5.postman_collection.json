@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "a021cca8-a97f-471f-9479-44a381ef6013",
+		"name": "U5-W2-D5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26374578"
+	},
+	"item": [
+		{
+			"name": "Elenco Utenti",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJDb250ZURyYWN1bGEiLCJpYXQiOjE2ODYzMjE2NzEsImV4cCI6MTY4NjkyNjQ3MX0.HOSBK_-vKv8vKar3G0n5EZbyinzhafjvIEqIsbQlWvBpBjTVXs40Jh9Bp2n5X2Ad",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ricerca Singolo Utente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJBamVqZUJyYXpvcmYiLCJpYXQiOjE2ODYzMTYxMDEsImV4cCI6MTY4NjkyMDkwMX0.jDUDw7-ves4P7l6R_3TSz4MJHG1adkpCFO1Dg9Cffciie1vOzoaqLBeYb0IuSzV3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/d9c05048-483b-4071-8e3a-17d7b1b9cb45",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"d9c05048-483b-4071-8e3a-17d7b1b9cb45"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Elenco Dispositivi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJTaWdub3JSZXp6b25pY28iLCJpYXQiOjE2ODYzMTg1NTAsImV4cCI6MTY4NjkyMzM1MH0.5Lz7dSodD5PwZ2FXQyWk3xjos3TDEFNjH1GBrh1vEm8uQ2idhyPR4Wntzcn_R9bP",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ricerca singolo dispositivo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJBamVqZUIiLCJpYXQiOjE2ODYzMTM2MjIsImV4cCI6MTY4NjkxODQyMn0.fd-OEqqcMglT0oDDjhTsu8TBhsh5Aphl5Q4PThjmW2E-JJFQmyYFQTaD3YhdEpgv",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/devices/4ffc0a34-0731-4288-936d-47d4fa8328b4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"devices",
+						"4ffc0a34-0731-4288-936d-47d4fa8328b4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Dispositivi assegnati utente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJBamVqZUIiLCJpYXQiOjE2ODYzMTM2MjIsImV4cCI6MTY4NjkxODQyMn0.fd-OEqqcMglT0oDDjhTsu8TBhsh5Aphl5Q4PThjmW2E-JJFQmyYFQTaD3YhdEpgv",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/d9c05048-483b-4071-8e3a-17d7b1b9cb45/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"d9c05048-483b-4071-8e3a-17d7b1b9cb45",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrazione Utente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhamVqZUBnbWFpbC5jb20iLCJpYXQiOjE2ODYyMjkwNzUsImV4cCI6MTY4NjgzMzg3NX0.H2l82YYn2zpRdFfk7GbiHO8IGeSSft8gHaj6uwTgEK289C0O3eKLC5uXO7R3L9Di",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"PdorFiglioDiKmer\",\r\n    \"nome\":\"Pdor\",\r\n    \"cognome\":\"FiglioDiKmer\",\r\n    \"email\":\"tribuDiStar@agg.com\",\r\n    \"password\":\"coluiCheSconfisseTutti\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aggiunta Dispositivo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJBamVqZUJyYXpvcmYiLCJpYXQiOjE2ODYzMTk4OTUsImV4cCI6MTY4NjkyNDY5NX0.-zSJlTG2tFC3212Oa-RQj6YCpl1-wIcK0UzbmWsRR-xP-5LCUHRDpn0JKWaz0Rsb",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"tipoDispositivo\":\"LAPTOP\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Utente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhamVqZUBnbWFpbC5jb20iLCJpYXQiOjE2ODYyMjkwNzUsImV4cCI6MTY4NjgzMzg3NX0.H2l82YYn2zpRdFfk7GbiHO8IGeSSft8gHaj6uwTgEK289C0O3eKLC5uXO7R3L9Di",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"AjejeBrazorf\",\r\n    \"password\":\"ajeje\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modifica Dispositivo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJTaWdub3JSZXp6b25pY28iLCJpYXQiOjE2ODYzMTg1NTAsImV4cCI6MTY4NjkyMzM1MH0.5Lz7dSodD5PwZ2FXQyWk3xjos3TDEFNjH1GBrh1vEm8uQ2idhyPR4Wntzcn_R9bP",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"tipoDispositivo\":\"TABLET\",\r\n   \"statoDispositivo\":\"ASSEGNATO\",\r\n   \"utenteId\":\"f56e5394-14c2-4462-8878-034bcae28fb7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/devices/a35c9bb3-d2f5-4cf3-b038-487dfb56cee8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"devices",
+						"a35c9bb3-d2f5-4cf3-b038-487dfb56cee8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modifica Utente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJBamVqZUIiLCJpYXQiOjE2ODYzMTM2MjIsImV4cCI6MTY4NjkxODQyMn0.fd-OEqqcMglT0oDDjhTsu8TBhsh5Aphl5Q4PThjmW2E-JJFQmyYFQTaD3YhdEpgv",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"AjejeBrazorf\",\r\n    \"nome\": \"Ajeje\",\r\n    \"cognome\": \"Brazorf\",\r\n    \"email\": \"ajeje.brazorf@agg.com\",\r\n    \"password\": \"ajeje82\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/d9c05048-483b-4071-8e3a-17d7b1b9cb45",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"d9c05048-483b-4071-8e3a-17d7b1b9cb45"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminazione Utente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJBamVqZUJyYXpvcmYiLCJpYXQiOjE2ODYzMTc1MDAsImV4cCI6MTY4NjkyMjMwMH0.S3dOKrTXnTzPRoukid5TA2zBYuXqiAeSg660HAPDBkXPcQuebNSJ5WqRUdaff-jy",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/d9c05048-483b-4071-8e3a-17d7b1b9cb45",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"d9c05048-483b-4071-8e3a-17d7b1b9cb45"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminazione Prodotto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJTaWdub3JSZXp6b25pY28iLCJpYXQiOjE2ODYzMTg1NTAsImV4cCI6MTY4NjkyMzM1MH0.5Lz7dSodD5PwZ2FXQyWk3xjos3TDEFNjH1GBrh1vEm8uQ2idhyPR4Wntzcn_R9bP",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/devices/4ffc0a34-0731-4288-936d-47d4fa8328b4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"devices",
+						"4ffc0a34-0731-4288-936d-47d4fa8328b4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "prenotazioni",
+			"value": "http://localhost:8080/prenotazioni"
+		},
+		{
+			"key": "registrazione",
+			"value": "http://localhost:8080/auth/register"
+		},
+		{
+			"key": "login",
+			"value": "http://localhost:8080/auth/login"
+		}
+	]
+}
